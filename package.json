@@ -7,6 +7,7 @@
     "fixtures/parcel"
   ],
   "scripts": {
+    "publish": "yarn workspace use-hot-module-reload publish",
     "build": "yarn workspace use-hot-module-reload build",
     "start": "yarn workspace use-hot-module-reload start",
     "webpack": "yarn workspace webpack-fixture start",

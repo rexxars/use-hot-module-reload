@@ -1,7 +1,8 @@
 {
-  "name": "webpack-fixture",
+  "name": "webpack-esm-fixture",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -15,6 +15,13 @@ node_modules
 # MacOS
 .DS_Store
 
-# Lockfiles
-yarn.lock
+# Non-yarn lockfiles
+package-lock.json
 pnpm-lock.json
+
+# Readme that is copied pre-publish
+use-hot-module-reload/README.md
+
+# Bundler caches
+.parcel-cache
+.vite

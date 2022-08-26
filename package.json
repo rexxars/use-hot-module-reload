@@ -4,6 +4,7 @@
     "use-hot-module-reload",
     "fixtures/webpack",
     "fixtures/webpack-esm",
+    "fixtures/webpack-cjs",
     "fixtures/vite",
     "fixtures/parcel"
   ],
@@ -13,6 +14,7 @@
     "start": "yarn workspace use-hot-module-reload start",
     "webpack": "yarn workspace webpack-fixture start",
     "webpack-esm": "yarn workspace webpack-esm-fixture start",
+    "webpack-cjs": "yarn workspace webpack-cjs-fixture start",
     "vite": "yarn workspace vite-fixture start",
     "parcel": "yarn workspace parcel-fixture start"
   },

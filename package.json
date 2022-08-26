@@ -1,52 +1,26 @@
 {
-  "name": "use-hot-module-reload",
-  "version": "1.0.0",
-  "description": "React hook that triggers a callback after hot-module reloading has been performed (for any module, not just the one it was used in)",
-  "main": "dist/use-hot-module-reload.cjs.js",
-  "exports": {
-    ".": {
-      "import": "./dist/use-hot-module-reload.esm.mjs",
-      "browser": "./dist/use-hot-module-reload.esm.mjs",
-      "default": "./dist/use-hot-module-reload.cjs.js"
-    }
-  },
-  "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsup --config tsup.cjs.ts && tsup --config tsup.mjs.ts",
-    "test": "jest",
-    "prepublishOnly": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/rexxars/use-hot-module-reload.git"
-  },
-  "keywords": [
-    "hmr",
-    "hot-module-reload",
-    "webpack-vite"
+  "private": true,
+  "workspaces": [
+    "use-hot-module-reload",
+    "fixtures/webpack",
+    "fixtures/vite",
+    "fixtures/parcel"
   ],
-  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rexxars/use-hot-module-reload/issues"
+  "scripts": {
+    "build": "yarn workspace use-hot-module-reload build",
+    "start": "yarn workspace use-hot-module-reload start",
+    "webpack": "yarn workspace webpack-fixture start",
+    "vite": "yarn workspace vite-fixture start",
+    "parcel": "yarn workspace parcel-fixture start"
   },
-  "homepage": "https://github.com/rexxars/use-hot-module-reload#readme",
   "devDependencies": {
-    "@types/node": "^14.0.0",
-    "@types/react": "^18.0.17",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-sanity": "^6.0.0",
     "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "rimraf": "^3.0.2",
-    "tsup": "^6.2.2",
-    "typescript": "^4.8.2"
-  },
-  "peerDependencies": {
-    "react": ">=17.0.0"
+    "process": "^0.11.10"
   },
   "prettier": {
     "semi": false,

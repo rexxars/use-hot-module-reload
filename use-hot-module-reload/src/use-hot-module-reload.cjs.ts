@@ -1,13 +1,13 @@
 import {useEffect} from 'react'
 
 // Allow us to short-circuit in production/non-HMR environments
-const hasHMR = () => {
+const hasHMR = (() => {
   try {
     return Boolean(typeof module !== 'undefined' && module.hot)
   } catch (err) {
     return false
   }
-}
+})()
 
 /**
  * Trigger a callback after hot-module reloads (any, not only the module using the hook).

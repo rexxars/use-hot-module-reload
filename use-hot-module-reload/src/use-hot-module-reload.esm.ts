@@ -79,7 +79,7 @@ function useViteHotModuleReload(callback: () => void): void {
        */
       const disposers = new Set<() => void>()
       import.meta.hot.on('vite:beforeUpdate', () => {
-        let flushTimeout: number | NodeJS.Timeout
+        let flushTimeout: number | ReturnType<typeof setTimeout>
         let hasSeenScheduledUpdate = window.__vite_plugin_react_timeout > 0
 
         const refreshProber = setInterval(() => {

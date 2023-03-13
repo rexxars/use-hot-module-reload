@@ -10,6 +10,7 @@
     "use-hot-module-reload": "^1.0.1"
   },
   "scripts": {
+    "clean": "rimraf build",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },

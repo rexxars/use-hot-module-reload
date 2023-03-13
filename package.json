@@ -2,21 +2,27 @@
   "private": true,
   "workspaces": [
     "use-hot-module-reload",
-    "fixtures/webpack",
-    "fixtures/webpack-esm",
-    "fixtures/webpack-cjs",
+    "fixtures/jest-cjs",
+    "fixtures/jest-esm",
+    "fixtures/parcel",
     "fixtures/vite",
-    "fixtures/parcel"
+    "fixtures/webpack",
+    "fixtures/webpack-cjs",
+    "fixtures/webpack-esm"
   ],
   "scripts": {
-    "publish": "yarn workspace use-hot-module-reload publish",
+    "clean": "rimraf fixtures/*/node_modules && yarn workspaces run clean && rimraf node_modules .parcel-cache",
+    "test": "yarn workspaces run build",
+    "publish": "yarn test && yarn workspace use-hot-module-reload publish",
     "build": "yarn workspace use-hot-module-reload build",
     "start": "yarn workspace use-hot-module-reload start",
     "webpack": "yarn workspace webpack-fixture start",
     "webpack-esm": "yarn workspace webpack-esm-fixture start",
     "webpack-cjs": "yarn workspace webpack-cjs-fixture start",
     "vite": "yarn workspace vite-fixture start",
-    "parcel": "yarn workspace parcel-fixture start"
+    "parcel": "yarn workspace parcel-fixture start",
+    "jest-cjs": "yarn workspace jest-cjs-fixture build",
+    "jest-esm": "yarn workspace jest-esm-fixture build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.33.1",
@@ -25,7 +31,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-sanity": "^6.0.0",
     "prettier": "^2.7.1",
-    "process": "^0.11.10"
+    "rimraf": "^4.4.0"
   },
   "prettier": {
     "semi": false,

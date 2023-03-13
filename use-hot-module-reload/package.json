@@ -2,15 +2,21 @@
   "name": "use-hot-module-reload",
   "version": "1.0.2",
   "description": "React hook that triggers a callback after hot-module reloading has been performed (for any module, not just the one it was used in)",
-  "main": "dist/use-hot-module-reload.cjs.js",
   "exports": {
     ".": {
+      "require": "./dist/use-hot-module-reload.cjs.js",
+      "node": {
+        "import": "./dist/use-hot-module-reload.esm.mjs",
+        "require": "./dist/use-hot-module-reload.cjs.js"
+      },
       "import": "./dist/use-hot-module-reload.esm.mjs",
-      "browser": "./dist/use-hot-module-reload.esm.mjs",
-      "default": "./dist/use-hot-module-reload.cjs.js"
+      "default": "./dist/use-hot-module-reload.esm.mjs"
     }
   },
+  "main": "./dist/use-hot-module-reload.cjs.js",
+  "module": "./dist/use-hot-module-reload.esm.mjs",
   "scripts": {
+    "clean": "rimraf dist",
     "prebuild": "rimraf dist",
     "build": "concurrently \"tsup --config tsup.cjs.ts\" \"tsup --config tsup.mjs.ts\"",
     "test": "jest",

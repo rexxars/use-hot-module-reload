@@ -8,8 +8,9 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
+    "clean": "rimraf dist",
     "start": "parcel src/index.html",
-    "build": "parcel build"
+    "build": "parcel build src/index.html"
   },
   "browserslist": {
     "production": [

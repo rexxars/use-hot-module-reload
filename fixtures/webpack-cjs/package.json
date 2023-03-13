@@ -23,6 +23,7 @@
     "webpack-dev-server": "^4.6.0"
   },
   "scripts": {
+    "clean": "rimraf build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js"
   },

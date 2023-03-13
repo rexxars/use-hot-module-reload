@@ -9,6 +9,7 @@
     "vite": "^3.0.9"
   },
   "scripts": {
+    "clean": "rimraf dist",
     "start": "vite dev",
     "build": "vite build"
   }

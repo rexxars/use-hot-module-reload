@@ -2,6 +2,33 @@
   "name": "webpack-cjs-fixture",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "rimraf build",
+    "start": "node scripts/start.js"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -21,32 +48,5 @@
     "use-hot-module-reload": "^1.0.1",
     "webpack": "^5.64.4",
     "webpack-dev-server": "^4.6.0"
-  },
-  "scripts": {
-    "clean": "rimraf build",
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
   }
 }

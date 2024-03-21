@@ -11,18 +11,27 @@
     "fixtures/webpack-esm"
   ],
   "scripts": {
-    "clean": "rimraf fixtures/*/node_modules && yarn workspaces run clean && rimraf node_modules .parcel-cache",
-    "test": "yarn workspaces run build",
-    "publish": "yarn test && yarn workspace use-hot-module-reload publish",
     "build": "yarn workspace use-hot-module-reload build",
-    "start": "yarn workspace use-hot-module-reload start",
-    "webpack": "yarn workspace webpack-fixture start",
-    "webpack-esm": "yarn workspace webpack-esm-fixture start",
-    "webpack-cjs": "yarn workspace webpack-cjs-fixture start",
-    "vite": "yarn workspace vite-fixture start",
-    "parcel": "yarn workspace parcel-fixture start",
+    "clean": "rimraf fixtures/*/node_modules && yarn workspaces run clean && rimraf node_modules .parcel-cache",
     "jest-cjs": "yarn workspace jest-cjs-fixture build",
-    "jest-esm": "yarn workspace jest-esm-fixture build"
+    "jest-esm": "yarn workspace jest-esm-fixture build",
+    "parcel": "yarn workspace parcel-fixture start",
+    "publish": "yarn test && yarn workspace use-hot-module-reload publish",
+    "start": "yarn workspace use-hot-module-reload start",
+    "test": "yarn workspaces run build",
+    "vite": "yarn workspace vite-fixture start",
+    "webpack": "yarn workspace webpack-fixture start",
+    "webpack-cjs": "yarn workspace webpack-cjs-fixture start",
+    "webpack-esm": "yarn workspace webpack-esm-fixture start"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "plugins": [
+      "prettier-plugin-packagejson"
+    ],
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.33.1",
@@ -31,12 +40,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-sanity": "^6.0.0",
     "prettier": "^2.7.1",
+    "prettier-plugin-packagejson": "^2.4.12",
     "rimraf": "^4.4.0"
-  },
-  "prettier": {
-    "semi": false,
-    "printWidth": 100,
-    "bracketSpacing": false,
-    "singleQuote": true
   }
 }

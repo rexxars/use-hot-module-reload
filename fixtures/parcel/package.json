@@ -2,15 +2,10 @@
   "name": "parcel-fixture",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "parcel": "^2.7.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "scripts": {
+    "build": "parcel build src/index.html",
     "clean": "rimraf dist",
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel src/index.html"
   },
   "browserslist": {
     "production": [
@@ -23,5 +18,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "parcel": "^2.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

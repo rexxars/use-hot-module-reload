@@ -4,6 +4,7 @@ React hook that triggers a callback after hot-module reloading has been performe
 
 Works with modern versions of Webpack and Vite.
 Other bundlers may be added if they expose a way to listen for updates.
+Unsupported bundlers will not trigger the callback, but the hook should not break anything.
 
 ## Installation
 

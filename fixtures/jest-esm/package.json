@@ -1,11 +1,15 @@
 {
   "name": "jest-esm-fixture",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
-    "clean": "echo 'nothing to do'",
-    "build": "NODE_OPTIONS=--experimental-vm-modules jest"
+    "build": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "clean": "echo 'nothing to do'"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {}
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -15,9 +19,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "use-hot-module-reload": "^1.0.1"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "transform": {}
   }
 }
